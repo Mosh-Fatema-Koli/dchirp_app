@@ -1,5 +1,6 @@
 import 'package:dchirp_app/view/Screen/Appbar.dart';
 import 'package:dchirp_app/view/Screen/drawer.dart';
+import 'package:dchirp_app/view/pages/story.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -54,69 +55,15 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Container(
-              height: 200,
+              height: 180,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10),
                 color: Color.fromARGB(255, 48, 46, 46),
               ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
-                    child: Container(
-                        height: 180,
-                        width: 110,
-                        decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 70, 69, 69),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Stack(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(20),
-                                topRight: Radius.circular(20),
-                              ),
-                              child: Image.asset(
-                                "images/default.jpg",
-                                height: 100,
-                                fit: BoxFit.cover,
-                                width: MediaQuery.of(context).size.width,
-                              ),
-                            ),
-                            Positioned(
-                              top: 80,
-                              left: 0,
-                              right: 0,
-                              child: CircleAvatar(
-                                child: Icon(Icons.add),
-                              ),
-                            ), Positioned(
-                              top: 150,
-                              left: 0,
-                              right: 0,
-                              child: Text("Create a story",textAlign: TextAlign.center,style: TextStyle(color: Colors.white,),),
-
-                            )
-                          ],
-                        )),
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-                    child: Container(
-                      height: 180,
-                      width: 110,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 70, 69, 69),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              child: Padding(
+                padding: const EdgeInsets.all(0),
+                child: StoryPage(),
+              )
             ),
           ),
           Padding(
