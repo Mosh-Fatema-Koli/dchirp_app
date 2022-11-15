@@ -27,10 +27,11 @@ setAppBar() {
     backgroundColor: Colors.black,
     leading: GestureDetector(
       onTap: () => Get.to(HomePage()),
-      child: Expanded(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 5),
         child: CircleAvatar(
           radius: 100,
-          backgroundImage: AssetImage('images/logo.jpg'),
+          backgroundImage: AssetImage("images/logo.jpg"),
         ),
       ),
     ),
@@ -39,7 +40,7 @@ setAppBar() {
         Expanded(
           flex: 2,
           child: Text("DCHIRP.COM",
-              style: TextStyle(color: Colors.white, fontSize: 15)),
+              style: TextStyle(color: Colors.white, fontSize: 12)),
         ),
         Expanded(
             flex: 3,

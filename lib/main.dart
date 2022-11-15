@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: splash,
       getPages: getPages,
-      home: HomePage(),
+      home: SplashPage(),
       debugShowCheckedModeBanner: false,
     );
   }
