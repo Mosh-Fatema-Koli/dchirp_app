@@ -1,4 +1,5 @@
-import 'package:dchirp_app/view/pages/home.dart';
+import 'package:dchirp_app/view/pages/Home/home.dart';
+import 'package:dchirp_app/view/pages/Home/search.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,48 +37,14 @@ setAppBar() {
       ),
     ),
     title: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Expanded(
-          flex: 2,
-          child: Text("DCHIRP.COM",
-              style: TextStyle(color: Colors.white, fontSize: 12)),
-        ),
-        Expanded(
-            flex: 3,
-            child: TextField(
-              cursorColor: Colors.white,
-              autofocus: false,
-              style: TextStyle(color: Colors.white),
-              decoration: InputDecoration(
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-                  fillColor: Color.fromARGB(255, 16, 30, 56),
-                  filled: true,
-                  isDense: true,
-                  hintText: "Search",
-                  hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                    color: Colors.grey,
-                  )),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                    ),
-                  ),
-                  suffixIcon: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.search,
-                      color: Colors.white,
-                    ),
-                  )),
-            )),
+        Text("DCHIRP.COM",
+            style: TextStyle(color: Colors.white, fontSize: 12)),
+        IconButton(onPressed: (){
+          Get.to(SearchPage());
+        }, icon: Icon(Icons.search,color: Colors.white,))
+
       ],
     ),
     actions: [IconWidget()],

@@ -1,7 +1,6 @@
 import 'package:dchirp_app/route/route.dart';
 import 'package:dchirp_app/view/Screen/Splash.dart';
 import 'package:dchirp_app/view/Screen/login.dart';
-import 'package:dchirp_app/view/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

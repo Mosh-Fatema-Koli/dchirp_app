@@ -1,5 +1,8 @@
-import 'package:dchirp_app/view/pages/home.dart';
+
+import 'package:dchirp_app/view/Screen/login.dart';
+import 'package:dchirp_app/view/pages/Add%20Profile/Add_profile_pop_up.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 class ServiceDrawer extends StatefulWidget {
@@ -35,7 +38,14 @@ class _ServiceDrawerState extends State<ServiceDrawer> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pop(context);
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        backgroundColor: Color.fromARGB(255, 82, 80, 80),
+                        title: LoginPage(),
+                      );
+                    });
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 15, right: 90, top: 20),
@@ -43,16 +53,11 @@ class _ServiceDrawerState extends State<ServiceDrawer> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.red),
+                      color: Colors.teal),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.account_balance_wallet_rounded,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
+                      Image.asset("images/logo.jpg",height: 15,width: 15,),
+                      Gap(5),
                       Text(
                         "LOGIN WITH WALLET",
                         style: TextStyle(
@@ -66,6 +71,10 @@ class _ServiceDrawerState extends State<ServiceDrawer> {
             ),
             SizedBox(height: 10),
             ListTile(
+              onTap:(){
+
+              },
+
                 dense: true,
                 visualDensity: VisualDensity(vertical: -3),
                 leading: Icon(
@@ -79,7 +88,7 @@ class _ServiceDrawerState extends State<ServiceDrawer> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                onTap: () {}),
+                ),
             ListTile(
                 dense: true,
                 visualDensity: VisualDensity(vertical: -3),
@@ -100,12 +109,12 @@ class _ServiceDrawerState extends State<ServiceDrawer> {
               child: new Center(
                 child: new Container(
                   margin: new EdgeInsetsDirectional.only(start: 10, end: 70),
-                  height: 2.0,
+                  height: 0.5,
                   color: Colors.grey,
                 ),
               ),
             ),
-            SizedBox(height: 10),
+
             ListTile(
                 dense: true,
                 visualDensity: VisualDensity(vertical: -3),
@@ -181,18 +190,18 @@ class _ServiceDrawerState extends State<ServiceDrawer> {
                   ),
                 ),
                 onTap: () {}),
-            SizedBox(height: 10),
+
             SizedBox(
               height: 5.0,
               child: new Center(
                 child: new Container(
                   margin: new EdgeInsetsDirectional.only(start: 10, end: 70),
-                  height: 2.0,
+                  height: 0.5,
                   color: Colors.grey,
                 ),
               ),
             ),
-            SizedBox(height: 10),
+
             ListTile(
                 dense: true,
                 visualDensity: VisualDensity(vertical: -3),
@@ -253,33 +262,35 @@ class _ServiceDrawerState extends State<ServiceDrawer> {
                   ),
                 ),
                 onTap: () {}),
-            SizedBox(height: 10),
             SizedBox(
               height: 5.0,
               child: new Center(
                 child: new Container(
                   margin: new EdgeInsetsDirectional.only(start: 10, end: 70),
-                  height: 2.0,
+                  height: 0.5,
                   color: Colors.grey,
                 ),
               ),
             ),
-            SizedBox(height: 10),
+
             ListTile(
                 dense: true,
                 visualDensity: VisualDensity(vertical: -3),
                 leading: Icon(
-                  Icons.question_mark_rounded,
+                  Icons.question_mark_sharp,
                   color: Colors.white,
                 ),
                 title: Text(
-                  'Helps',
+                  'Help',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
                 onTap: () {}),
+
+
+
           ],
         ),
       ),

@@ -1,4 +1,5 @@
-import 'package:dchirp_app/view/pages/home.dart';
+
+import 'package:dchirp_app/view/pages/Home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
