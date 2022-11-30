@@ -22,11 +22,26 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('images/logo.jpg'),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                boxShadow: [
+
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset('images/logo.jpg',height: 100,width: 100,),
+              ),
             ),
-            Gap(20),
+            Gap(50),
             Text(
               "DCHIRP.COM",
               textAlign: TextAlign.center,
@@ -35,7 +50,7 @@ class _SplashPageState extends State<SplashPage> {
             Gap(5),
             Text(
               "Powered By DS Legends Pte. Ltd.",
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              style: TextStyle(color: Colors.white, fontSize: 10),
             )
           ],
         ),
@@ -43,3 +58,4 @@ class _SplashPageState extends State<SplashPage> {
     );
   }
 }
+
